@@ -603,12 +603,12 @@ function Library.MakeWindow(Size, Subtext, ColorTheme)
 					TweenService:Create(v.SelectionIndicator, Tween, {BackgroundTransparency = 1, BackgroundColor3 = Color3.fromRGB(30, 30, 30)}):Play()
 					TweenService:Create(v.TabIcon, Tween, {ImageColor3 = Color3.fromRGB(225, 225, 225)}):Play()
 					TweenService:Create(v.TabName, Tween, {TextColor3 = Color3.fromRGB(225, 225, 225)}):Play()
-					TweenService:Create(v, Tween, {BackgroundTransparency = 1)}):Play()
+					TweenService:Create(v, Tween, {BackgroundTransparency = 1}):Play()
 					TabsData.Pages[i].Visible = false
 					TabsData.Buttons[i].Selected = false
 				end
 				TweenService:Create(SelectionIndicator, Tween, {BackgroundTransparency = 0, BackgroundColor3 = ColorTheme}):Play()
-				TweenService:Create(TabFrame, Tween, {BackgroundTransparency = 0)}):Play()
+				TweenService:Create(TabFrame, Tween, {BackgroundTransparency = 0}):Play()
 				TweenService:Create(TabIcon, Tween, {ImageColor3 = ColorTheme}):Play()
 				TweenService:Create(TabName, Tween, {TextColor3 = ColorTheme}):Play()
 				ScrollingFrame.Visible = true
