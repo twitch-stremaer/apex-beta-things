@@ -642,6 +642,47 @@ function Library.MakeWindow(Size, Subtext, ColorTheme)
 			Section.TextXAlignment = Enum.TextXAlignment.Left
 			AddColor(Section, "TextColor3")
 		end
+
+		function PageData.Label(Name)
+			local Button = Instance.new("Frame")
+			local UICorner = Instance.new("UICorner")
+			local TextLabel = Instance.new("TextLabel")
+			local ImageLabel = Instance.new("ImageLabel")
+
+			Button.Name = "Button"
+			Button.Parent = ScrollingFrame
+			Button.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+			Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Button.BorderSizePixel = 0
+			Button.Size = UDim2.new(1, 0, 0, 24)
+
+			UICorner.CornerRadius = UDim.new(0, 5)
+			UICorner.Parent = Button
+
+			TextLabel.Parent = Button
+			TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel.BackgroundTransparency = 1.000
+			TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			TextLabel.BorderSizePixel = 0
+			TextLabel.Position = UDim2.new(0, 7, 0, 0)
+			TextLabel.Size = UDim2.new(0.0869999975, 0, 0, 24)
+			TextLabel.Font = Enum.Font.FredokaOne
+			TextLabel.Text = Name
+			TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel.TextSize = 14.000
+			TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+			
+			local ButtonData = {}
+			function ButtonData:Update(a)
+				if a.Visible ~= nil then
+					Button.Visible = a.Visible
+				end
+				if a.Text ~= nil then
+					TextLabel.Text = tostring(a.Text)
+				end
+			end
+			return ButtonData
+		end
 		
 		function PageData.Button(Name, Callback)
 			local Button = Instance.new("Frame")
