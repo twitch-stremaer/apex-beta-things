@@ -425,10 +425,10 @@ local Library = {}
                     end
                 --end
             end))
-            WindowConnections:Add(Resize.MouseButton1Up:Connect(function(Key)
-                --if WindowConnections:IsPress(Key) then
+            WindowConnections:Add(UserInputService.InputEnded:Connect(function(Key)
+                if WindowConnections:IsPress(Key) then
                     IsResizing = false
-                --end
+                end
             end))
         end)()
         -- drag
