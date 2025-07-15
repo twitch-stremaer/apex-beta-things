@@ -59,6 +59,7 @@ local Library = {}
             ScreenGui.OnTopOfCoreBlur = true
             ScreenGui.DisplayOrder = 9999999
         end
+        getgenv().UI = ScreenGui
 
         MainFrame.Name = "MainFrame"
         MainFrame.Parent = ScreenGui
