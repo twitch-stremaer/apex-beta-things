@@ -583,15 +583,18 @@ local Library = {}
             ScrollingFrame.Position = UDim2.new(0, 8, 0, 12)
             ScrollingFrame.Size = UDim2.new(1, -16, 1, -20)
             ScrollingFrame.CanvasPosition = Vector2.new(0, 20)
-            ScrollingFrame.ScrollBarThickness = 0
+            ScrollingFrame.ScrollBarThickness = 12
             ScrollingFrame.Visible = false
             ScrollingFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y
             ScrollingFrame.ScrollingDirection = Enum.ScrollingDirection.Y
             ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
-
+            ScrollingFrame.BottomImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+            ScrollingFrame.TopImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+            
             UIListLayout.Parent = ScrollingFrame
             UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
             UIListLayout.Padding = UDim.new(0, 4)
+            UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Left
             
             TabsData.Buttons[#TabsData.Buttons + 1] = {[1]=TabFrame,Selected=false}
             TabsData.Pages[#TabsData.Pages + 1] = ScrollingFrame
@@ -670,7 +673,7 @@ local Library = {}
                 Button.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
                 Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
                 Button.BorderSizePixel = 0
-                Button.Size = UDim2.new(1, 0, 0, 24)
+                Button.Size = UDim2.new(1, -24, 0, 24)
 
                 UICorner.CornerRadius = UDim.new(0, 5)
                 UICorner.Parent = Button
@@ -711,7 +714,7 @@ local Library = {}
                 Button.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
                 Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
                 Button.BorderSizePixel = 0
-                Button.Size = UDim2.new(1, 0, 0, 24)
+                Button.Size = UDim2.new(1, -24, 0, 24)
 
                 UICorner.CornerRadius = UDim.new(0, 5)
                 UICorner.Parent = Button
@@ -800,7 +803,7 @@ local Library = {}
                 Dropdown.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
                 Dropdown.BorderColor3 = Color3.fromRGB(0, 0, 0)
                 Dropdown.BorderSizePixel = 0
-                Dropdown.Size = UDim2.new(1, 0, 0, 24)
+                Dropdown.Size = UDim2.new(1, -24, 0, 24)
                 Dropdown.ClipsDescendants = true
 
                 UICorner.CornerRadius = UDim.new(0, 5)
@@ -947,7 +950,7 @@ local Library = {}
                 Dropdown.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
                 Dropdown.BorderColor3 = Color3.fromRGB(0, 0, 0)
                 Dropdown.BorderSizePixel = 0
-                Dropdown.Size = UDim2.new(1, 0, 0, 24)
+                Dropdown.Size = UDim2.new(1, -24, 0, 24)
                 Dropdown.ClipsDescendants = true
 
                 UICorner.CornerRadius = UDim.new(0, 5)
@@ -1125,7 +1128,7 @@ local Library = {}
                 Slider.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
                 Slider.BorderColor3 = Color3.fromRGB(0, 0, 0)
                 Slider.BorderSizePixel = 0
-                Slider.Size = UDim2.new(1, 0, 0, 44)
+                Slider.Size = UDim2.new(1, -24, 0, 44)
 
                 UICorner.CornerRadius = UDim.new(0, 5)
                 UICorner.Parent = Slider
@@ -1243,7 +1246,7 @@ local Library = {}
                 TextBox.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
                 TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
                 TextBox.BorderSizePixel = 0
-                TextBox.Size = UDim2.new(1, 0, 0, 24)
+                TextBox.Size = UDim2.new(1, -24, 0, 24)
 
                 UICorner.CornerRadius = UDim.new(0, 5)
                 UICorner.Parent = TextBox
@@ -1343,7 +1346,7 @@ local Library = {}
                 Toggle.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
                 Toggle.BorderColor3 = Color3.fromRGB(0, 0, 0)
                 Toggle.BorderSizePixel = 0
-                Toggle.Size = UDim2.new(1, 0, 0, 24)
+                Toggle.Size = UDim2.new(1, -24, 0, 24)
 
                 UICorner.CornerRadius = UDim.new(0, 5)
                 UICorner.Parent = Toggle
