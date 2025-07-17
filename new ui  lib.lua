@@ -1075,7 +1075,7 @@ local Library = {}
                         WindowConnections:Add(TextButton.MouseButton1Click:Connect(function(Key)
                             --if WindowConnections:IsPress(Key) then
                                 IsActivated = false
-                                TweenService:Create(Dropdown, TweenInfo.new(Speed, Enum.EasingStyle.Sine), {Size = UDim2.new(1, 0, 0, 24)}):Play()
+                                TweenService:Create(Dropdown, TweenInfo.new(Speed, Enum.EasingStyle.Sine), {Size = UDim2.new(1, -24, 0, 24)}):Play()
                                 TweenService:Create(ImageLabel, TweenInfo.new(Speed, Enum.EasingStyle.Sine), {Rotation = 0}):Play()
                                 TweenService:Create(Frame, TweenInfo.new(Speed, Enum.EasingStyle.Sine), {Size = UDim2.new(1, 0, 0, 0)}):Play()
                                 Dropdown.ClipsDescendants = true
@@ -1099,11 +1099,11 @@ local Library = {}
                             for i, v in pairs(Array) do
                                 Size = Size + (25 + 3)
                             end
-                            TweenService:Create(Dropdown, TweenInfo.new(Speed, Enum.EasingStyle.Sine), {Size = UDim2.new(1, 0, 0, Size + 8)}):Play()
+                            TweenService:Create(Dropdown, TweenInfo.new(Speed, Enum.EasingStyle.Sine), {Size = UDim2.new(1, -24, 0, Size + 8)}):Play()
                             TweenService:Create(Frame, TweenInfo.new(Speed, Enum.EasingStyle.Sine), {Size = UDim2.new(1, 0, 0, Size - (24 + 8))}):Play()
                             Dropdown.ClipsDescendants = false
                         else
-                            TweenService:Create(Dropdown, TweenInfo.new(Speed, Enum.EasingStyle.Sine), {Size = UDim2.new(1, 0, 0, 24)}):Play()
+                            TweenService:Create(Dropdown, TweenInfo.new(Speed, Enum.EasingStyle.Sine), {Size = UDim2.new(1, -24, 0, 24)}):Play()
                             TweenService:Create(Frame, TweenInfo.new(Speed, Enum.EasingStyle.Sine), {Size = UDim2.new(1, 0, 0, 0)}):Play()
                             Dropdown.ClipsDescendants = true
                         end
