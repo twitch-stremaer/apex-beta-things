@@ -590,6 +590,7 @@ local Library = {}
             ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
             ScrollingFrame.BottomImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
             ScrollingFrame.TopImage = "rbxasset://textures/ui/Scroll/scroll-middle.png"
+            ScrollingFrame.ScrollBarImageColor3 = Color3.fromRGB(61, 61, 61)
             
             UIListLayout.Parent = ScrollingFrame
             UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
