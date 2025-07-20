@@ -1204,7 +1204,7 @@ local Library = {}
                                 Last = Percent
                                 TweenService:Create(InnerBar, TweenInfo.new(0.1, Enum.EasingStyle.Quint), {Size = UDim2.fromScale(Percent, 1)}):Play()
                                 local Value = MinValue + (Percent*(MaxValue-MinValue))
-                                TextLabel_2.Text = math.round(Value);
+                                TextLabel_2.Text = math.floor(Value);
                                 (Callback or function() end)(Value)
                             end
                             wait()
